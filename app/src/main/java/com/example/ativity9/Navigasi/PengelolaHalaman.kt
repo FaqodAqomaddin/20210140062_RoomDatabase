@@ -23,8 +23,8 @@ import com.example.ativity9.ui.theme.Halaman.EntrySiswaScreen
 import com.example.ativity9.ui.theme.Halaman.HomeScreen
 
 @Composable
-fun SiswaApp(navHostController: NavHostController = rememberNavController()){
-    HostNavigasi(navHostController = navHostController)
+fun SiswaApp(navController: NavHostController = rememberNavController()){
+    HostNavigasi(navController = navController)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
