@@ -56,7 +56,7 @@ fun HostNavigasi(
     navController: NavController,
     modifier: Modifier = Modifier
 ){
-    NavHost(navController = navController, startDestination = DestinasiHome.route, modifier = Modifier)
+    NavHost(navController = navController as NavHostController, startDestination = DestinasiHome.route, modifier = Modifier)
     {
         composable(DestinasiHome.route){
             HomeScreen(
