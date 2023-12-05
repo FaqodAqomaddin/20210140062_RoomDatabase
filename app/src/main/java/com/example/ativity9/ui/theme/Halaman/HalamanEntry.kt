@@ -1,6 +1,8 @@
 package com.example.ativity9.ui.theme.Halaman
 
 import android.text.Spannable.Factory
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.verticalScroll
@@ -11,10 +13,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.ativity9.Model.DetailSiswa
 import com.example.ativity9.Model.EntryViewModel
 import com.example.ativity9.Model.PenyediaViewModel
+import com.example.ativity9.Model.UIStateSiswa
 import com.example.ativity9.Navigasi.DestinasiNavigasi
+import com.example.ativity9.R
 import kotlinx.coroutines.launch
 
 object DestinasiEntry: DestinasiNavigasi {
@@ -52,6 +59,25 @@ fun EntrySiswaScreen(
                 .padding(innerPadding)
                 .verticalScroll(rememberCoroutineScope())
                 .fillMaxWidth()
+        )
+    }
+}
+
+@Composable
+fun EntrySiswaBody(
+    uiStateSiswa: UIStateSiswa,
+    onSiswaValueChange: (DetailSiswa) -> Unit,
+    onSaveClick: () -> Unit,
+    modifier: Modifier = Modifier
+){
+    Column (
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_Large)),
+        modifier = modifier.padding(dimensionResource(id = R.dimen.padding_medium))
+    ){
+        FormInputSiswa(
+            detailSiswa = UIStateSiswa.detailSiswa,
+            onValueChange = onSiswaValueChange,
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }
