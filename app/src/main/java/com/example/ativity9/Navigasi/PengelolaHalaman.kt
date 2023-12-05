@@ -19,6 +19,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.ativity9.R
 import com.example.ativity9.ui.theme.Halaman.DestinasiEntry
 import com.example.ativity9.ui.theme.Halaman.DestinasiHome
+import com.example.ativity9.ui.theme.Halaman.EntrySiswaScreen
 import com.example.ativity9.ui.theme.Halaman.HomeScreen
 
 @Composable
@@ -61,6 +62,9 @@ fun HostNavigasi(
             HomeScreen(
                 navigateToItemEntry = { navController.navigate(DestinasiEntry.route)},
                 )
+        }
+        composable(DestinasiEntry.route){
+            EntrySiswaScreen(navigateBack = { navController.popBackStack()})
         }
     }
 }
