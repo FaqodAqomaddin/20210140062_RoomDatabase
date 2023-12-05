@@ -125,5 +125,10 @@ fun DataSiswa(
     siswa: Siswa,
     modifier: Modifier = Modifier
 ){
+    Card (
+        modifier = modifier,
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ){
 
+    }
 }
