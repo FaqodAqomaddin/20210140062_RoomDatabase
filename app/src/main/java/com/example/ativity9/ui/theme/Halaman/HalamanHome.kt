@@ -144,7 +144,7 @@ fun DataSiswa(
                 Text(
                     text = siswa.nama,
                     style = MaterialTheme.typography.titleLarge,
-                    )
+                )
                 Spacer(modifier.weight(1f))
                 Icon(
                     imageVector = Icons.Default.Phone,
@@ -155,6 +155,10 @@ fun DataSiswa(
                     style = MaterialTheme.typography.titleMedium
                 )
             }
+            Text(
+                text = siswa.alamat,
+                style = MaterialTheme.typography.titleMedium
+            )
         }
     }
 }
