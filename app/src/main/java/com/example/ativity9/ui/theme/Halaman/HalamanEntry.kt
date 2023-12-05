@@ -1,6 +1,7 @@
 package com.example.ativity9.ui.theme.Halaman
 
 import android.text.Spannable.Factory
+import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -91,4 +92,15 @@ fun EntrySiswaBody(
             Text(stringResource(id = R.string.btn_submit))
         }
     }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormInputSiswa(
+    detailSiswa: DetailSiswa,
+    modifier: Modifier = Modifier,
+    onValueChange: (DetailSiswa) -> Unit = {},
+    enabled: Boolean = true
+){
+
 }
