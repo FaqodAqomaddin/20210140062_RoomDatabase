@@ -145,6 +145,15 @@ fun DataSiswa(
                     text = siswa.nama,
                     style = MaterialTheme.typography.titleLarge,
                     )
+                Spacer(modifier.weight(1f))
+                Icon(
+                    imageVector = Icons.Default.Phone,
+                    contentDescription = null,
+                )
+                Text(
+                    text = siswa.telpon,
+                    style = MaterialTheme.typography.titleMedium
+                )
             }
         }
     }
