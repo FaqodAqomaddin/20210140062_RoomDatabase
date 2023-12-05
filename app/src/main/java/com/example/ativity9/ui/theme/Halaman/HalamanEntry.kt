@@ -41,7 +41,7 @@ object DestinasiEntry: DestinasiNavigasi {
 fun EntrySiswaScreen(
     navigateBack: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: EntryViewModel = viewModel(Factory= PenyediaViewModel.Factory)
+    viewModel: EntryViewModel = viewModel(factory= PenyediaViewModel.Factory)
 ){
     val coroutineScope = rememberCoroutineScope()
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
