@@ -1,6 +1,7 @@
 package com.example.ativity9.ui.theme.Halaman
 
 import android.text.Spannable.Factory
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -129,6 +130,11 @@ fun DataSiswa(
         modifier = modifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ){
+        Column(
+            modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_Large)),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
+        ){
 
+        }
     }
 }
