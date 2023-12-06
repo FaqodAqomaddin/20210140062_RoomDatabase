@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
@@ -29,6 +30,7 @@ import com.example.ativity9.Model.EntryViewModel
 import com.example.ativity9.Model.PenyediaViewModel
 import com.example.ativity9.Model.UIStateSiswa
 import com.example.ativity9.Navigasi.DestinasiNavigasi
+import com.example.ativity9.Navigasi.SiswaTopAppBar
 import com.example.ativity9.R
 import kotlinx.coroutines.launch
 
@@ -48,7 +50,7 @@ fun EntrySiswaScreen(
     Scaffold (
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            SiswaTopAppbar(
+            SiswaTopAppBar(
                 title = stringResource(DestinasiEntry.titleRes),
                 canNavigateBack = true,
                 scrollBehavior = scrollBehavior
@@ -65,7 +67,7 @@ fun EntrySiswaScreen(
             },
             modifier = Modifier
                 .padding(innerPadding)
-                .verticalScroll(rememberCoroutineScope())
+                .verticalScroll(rememberScrollState())
                 .fillMaxWidth()
         )
     }
@@ -83,7 +85,7 @@ fun EntrySiswaBody(
         modifier = modifier.padding(dimensionResource(id = R.dimen.padding_medium))
     ){
         FormInputSiswa(
-            detailSiswa = UIStateSiswa.detailSiswa,
+            detailSiswa = uiStateSiswa.detailSiswa,
             onValueChange = onSiswaValueChange,
             modifier = Modifier.fillMaxWidth()
         )
